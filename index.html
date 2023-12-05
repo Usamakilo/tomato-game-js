@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Description" content="Tomato Game Demo" />
-
-    <title>The Tomato Game</title>
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <h1>The Tomato Game</h1>
+    <div class="container">
+      <div id="question-container">
+        <div id="loading-spinner" class="hidden"></div>
+        <img id="question" src="" alt="Question Image" />
+      </div>
 
-    <img id="question" />
-    <div>
-      <label for="input">Enter the missing digit: </label>
+      <form id="inputForm">
+        <label for="input">Your Answer:</label>
+        <input type="number" id="input" min="0" max="9" required />
+        <button type="submit">Submit</button>
+      </form>
 
-      <input
-        id="input"
-        onchange="handleInput()"
-        type="number"
-        step="1"
-        min="0"
-        max="9"
-      />
+      <div id="result-container">
+        <p id="timer-label">Time Remaining:</p>
+        <p id="seconds">30</p>
+        <p id="score-label">Score:</p>
+        <p id="score">0</p>
+        <p id="result-message"></p>
+      </div>
+
+      <button id="newGameButton">New Game</button>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
