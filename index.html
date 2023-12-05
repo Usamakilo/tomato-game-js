@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Tomato Game Demo" />
+
+    <title>The Tomato Game</title>
+  </head>
+
+  <body>
+    <h1>The Tomato Game</h1>
+
+    <img id="question" />
+    <div>
+      <label for="input">Enter the missing digit: </label>
+
+      <input
+        id="input"
+        onchange="handleInput()"
+        type="number"
+        step="1"
+        min="0"
+        max="9"
+      />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
